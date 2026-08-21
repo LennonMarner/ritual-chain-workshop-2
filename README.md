@@ -148,3 +148,71 @@ betting model is plain pari-mutuel: two running totals and one mapping per side.
 - Ritual Chain docs — <https://docs.ritualfoundation.org>
 - dApp skills — <https://github.com/ritual-foundation/ritual-dapp-skills>
 - Explorer — <https://explorer.ritualfoundation.org> · Faucet — <https://faucet.ritualfoundation.org>
+
+---
+
+## Proof of Building Notes
+
+This repository is an active fork of the official Ritual Academy Workshop 2.
+
+### What I Worked On
+
+My work focused on understanding and documenting the complete lifecycle of
+the self-resolving prediction market.
+
+The main areas I studied were:
+
+- market creation
+- YES and NO staking
+- block-based deadlines
+- Scheduler integration
+- TEE executor selection
+- HTTP precompile usage
+- jq data extraction
+- oracle failure handling
+- retry behavior
+- invalid market handling
+- pull-based reward claims
+
+### Development Approach
+
+Because the public Ritual Chain environment was unavailable during this
+work, I focused on local development and source-level analysis.
+
+I treated the existing contract as the starting point rather than rewriting
+the workshop from scratch.
+
+I added documentation explaining the architecture, testing strategy,
+resolution flow, technical design, and future improvements.
+
+### Why This Matters
+
+The interesting part of this workshop is not simply creating a betting
+contract.
+
+The important concept is that the contract can determine when it should be
+resolved and obtain external information through Ritual infrastructure.
+
+This creates a different development model from a traditional smart contract
+that depends on an external keeper.
+
+### Key Takeaways
+
+The project demonstrated several important concepts:
+
+1. Autonomous scheduled execution.
+2. External HTTP data retrieval.
+3. Structured data extraction.
+4. TEE-based execution.
+5. Retry and failure handling.
+6. Block-based resolution.
+7. Pull-based reward distribution.
+
+### Future Work
+
+Future improvements could include a frontend, richer tests, additional
+comparison operators, multiple oracle sources, and stronger local failure
+simulation.
+
+The goal would be to extend the workshop while keeping the resolution rules
+deterministic and transparent.
