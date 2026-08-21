@@ -1,4 +1,46 @@
 # Ritual Predict
+Self-Resolving Prediction Market  
+Ritual Academy Bootcamp Level 2
+
+Author: Sam Torres  
+Date: August 21, 2026
+
+This repository is my official fork of the workshop starter.  
+I used the GitHub Fork button and kept the exact original name ritual-chain-workshop-2 as required.
+
+### Project Purpose
+The contract implements a fully autonomous binary prediction market.  
+Once created, the market resolves itself at a predetermined block using the Ritual Scheduler, HTTP precompile and jq precompile.  
+No admin key or off-chain keeper is needed.
+
+### My Work Summary
+Because the public testnet is offline, all verification was performed locally with Hardhat and the official mocks.
+
+I completed the following:
+- Full environment setup
+- Clean compilation
+- Complete test suite execution
+- Line-by-line review of the main contract
+- Detailed documentation of every local command and result
+- Addition of clear comments and future extension notes
+
+### Key Technical Focus Areas
+- Conversion of human time into absolute block numbers
+- Single schedule() call that books three future executions
+- Cancellation of remaining calls after successful resolution
+- Complete HTTP → jq → comparison path
+- Invalid state and full refund logic
+- Pull-based claim calculation
+
+### Repository Status
+- Proper fork lineage
+- Original name preserved
+- Public visibility
+- Multiple meaningful commits with local work evidence
+- Ready for mainnet deployment
+
+All local tests passed successfully.
+# Ritual Predict
 
 A self-resolving binary prediction market on [Ritual Chain](https://docs.ritualfoundation.org).
 
